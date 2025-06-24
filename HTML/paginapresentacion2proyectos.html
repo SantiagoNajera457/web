@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../CSS/estilo2proyectos.css">
+    <title>Proyectos multidisciplinarios en aguas subterr&aacute;neas</title>
+</head>
+<body>
+    <ul class="navbar">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../HTML/paginapresentacion2grupo.html">Grupo de trabajo</a></li>
+        <li><a class="active" href="#">Proyectos</a></li>
+        <li><a href="../HTML/paginapresentacion2contacto.html">Contacto</a></li>
+    </ul>
+
+    <h1><br>Proyectos</h1>
+    <br><br><br><br>
+
+<section class="proyectos">
+    <div class="tarjetas-proyectos">
+        <div class="tarjeta">
+            <img src="../IMAGEN/cosomanguera.jpg" alt="Proyecto CONAHCYT">
+            <h3>Proyecto C&aacute;tedras CONAHCYT - 2018</h3>
+            <p>"Exploraci&oacute;n y explotaci&oacute;n sustentable de los acu&iacute;feros en M&eacute;xico"</p>
+            <p>Departamento de Recursos Naturales - Instituto de Geof&iacute;sica<br>Universidad Nacional Aut&oacute;noma de M&eacute;xico</p>
+            <a href="https://catedra-conacyt-unam.jimdosite.com/" class="boton">Ver m&aacute;s</a>
+        </div>
+        <div class="tarjeta">
+            <img src="../IMAGEN/aguagrifo.jpg" alt="Peligrosidad Arsenico">
+            <h3>Peligrosidad por Ars&eacute;nico en el AMQ</h3>
+            <p>Peligrosidad por Ars&eacute;nico en el Acu&iacute;fero Morelia - Quer&eacute;ndaro</p>
+            <p>Tesis doctoral<br>Transporte y Destino de Ars&eacute;nico en el Acu&iacute;fero Morelia-Quer&eacute;daro<br>por medio de Modelaci&oacute;n Subterr&aacute;nea</p>
+            <a href="https://aspeligrosidadamq.com/" class="boton">Ver m&aacute;s</a>
+        </div>
+    </div>
+</section>
+
+<section class="mapa-interactivo">
+    <h2>Mapa de acu&iacute;feros en M&eacute;xico</h2>
+    <div class="controles-capas">
+        <label for="selector-capas">Ver capa:</label>
+        <select id="selector-capas">
+            <option value="ninguno">Ninguno</option>
+            <option value="rios">Ríos</option>
+            <option value="lagos">Lagos</option>
+            <option value="acuiferos">Acuíferos</option>
+        </select>
+    </div>
+    <div id="map"></div>
+</section>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+    const map = L.map('map').setView([23.6345, -102.5528], 5);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    const rios = L.layerGroup([
+        L.marker([19.3, -99.1]).bindPopup("Río Simulado 1"),
+        L.marker([20.6, -103.4]).bindPopup("Río Simulado 2")
+    ]);
+
+    const lagos = L.layerGroup([
+        L.circle([19.4, -98.9], { radius: 10000, color: 'blue' }).bindPopup("Lago Simulado")
+    ]);
+
+    const acuiferos = L.layerGroup([
+        L.rectangle([[21, -101], [22, -100]], { color: 'green' }).bindPopup("Acuífero Simulado")
+    ]);
+
+    const capas = { rios, lagos, acuiferos };
+
+    document.getElementById('selector-capas').addEventListener('change', function () {
+        const seleccionada = this.value;
+
+        // Primero quitamos todas
+        for (const key in capas) {
+            map.removeLayer(capas[key]);
+        }
+
+        // Y ahora agregamos solo la seleccionada
+        if (capas[seleccionada]) {
+            capas[seleccionada].addTo(map);
+        }
+    });
+</script>
+
+</body>
+</html>

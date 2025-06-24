@@ -1,0 +1,148 @@
+body {
+    font-size: 20px;
+    background: url(../IMAGEN/aguasubterranea3.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1a1a1a99;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+ul.navbar li {
+    display: inline-block;
+}
+
+ul.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+ul.navbar li a:hover {
+    background-color: #1a1a1a;
+}
+
+ul.navbar li a.active {
+    background-color: #1a1a1a;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 360%;
+}
+
+h2, h3, p {
+    text-align: center;
+    color: white;
+}
+
+.proyectos {
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tarjetas-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.tarjeta {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.tarjeta h3 {
+    margin: 15px 10px 10px;
+    color: #013b75;
+}
+
+.tarjeta p {
+    padding: 0 15px 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+.boton {
+    display: inline-block;
+    margin: 10px 0 20px;
+    padding: 10px 20px;
+    background-color: #013b75;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.boton:hover {
+    background-color: #045fa4;
+}
+
+.mapa-interactivo {
+    margin: 40px auto;
+    max-width: 1200px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.controles-capas label {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.controles-capas {
+    margin-bottom: 20px;
+    color: white;
+    font-size: 18px;
+}
+
+.controles-capas select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background-color: #1a1a1a;
+    color: white;
+}

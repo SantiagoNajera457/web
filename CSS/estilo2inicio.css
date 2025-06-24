@@ -1,0 +1,266 @@
+body {
+    font-size: 20px;
+    background: url(../IMAGEN/aguasubterranea2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1a1a1a99;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+ul.navbar li {
+    display: inline-block;
+}
+
+ul.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+ul.navbar li a:hover {
+    background-color: #1a1a1a;
+}
+
+ul.navbar li a.active {
+    background-color: #1a1a1a;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 360%;
+}
+
+h2, h3, p {
+    text-align: center;
+    color: white;
+}
+
+.GIGIAS{
+    background-color: #1a1a1a99;
+    padding: 20px;
+    margin: 40px auto;
+    width: 85%;
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px #1a1a1a99;
+}
+
+.Texto-GIGIAS {
+    color: white;
+    font-size: 20px;
+}
+
+.Texto-GIGIAS h3 {
+    margin-bottom: 8px;
+    font-size: 26px;
+    color: white;
+}
+
+.Tematicas {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin: 40px auto;
+    width: 85%;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.Tematicas h2 {
+    color: #ffffff;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.Tematicas img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.Tematicas img:hover {
+    transform: scale(1.03);
+    transition: transform 0.5s ease;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.accordion-section {
+    margin-bottom: 20px;
+}
+
+.accordion-title {
+    cursor: pointer;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 24px;
+    transition: background-color 0.3s;
+}
+
+.accordion-title:hover {
+    background-color: #333333;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding: 0 10px;
+}
+
+.accordion-content.open {
+    max-height: 300px;
+    padding-top: 10px;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-name: fadeInUp;
+    animation-duration: 0.8s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-delayed:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.fade-in-delayed:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.fade-in-delayed:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.carrusel {
+    position: relative;
+    width: 90%;
+    max-width: 1400px;
+    margin: 30px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+.carrusel .slide {
+    display: none;
+    width: 100%;
+    height: 500px;
+}
+
+.carrusel .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.carrusel .slide.active {
+    display: block;
+    animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+.carrusel .prev, .carrusel .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 28px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.carrusel .prev:hover,
+.carrusel .next:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+
+.carrusel .prev {
+    left: 10px;
+}
+
+.carrusel .next {
+    right: 10px;
+}
+
+.carrusel-titulo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 5;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.carrusel-titulo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+    color: white;
+    padding: 20px 30px;
+    border-radius: 15px;
+    max-width: 800px;  /* ← Aquí está la clave */
+    width: 90%;        /* Responsivo en pantallas pequeñas */
+    text-align: center;
+    z-index: 20;
+}
+
+.carrusel-titulo h1 {
+    color: white;
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: none; /* Puedes quitar la sombra ahora si quieres */
+}

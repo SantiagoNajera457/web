@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="CSS/estilo2inicio.css">
+    <title>Proyectos multidisciplinarios en aguas subterr&aacute;neas</title>
+</head>
+<body>
+    <ul class="navbar">
+        <li><a class="active" href="#">Inicio</a></li>
+        <li><a href="HTML/paginapresentacion2grupo.html">Grupo de trabajo</a></li>
+        <li><a href="HTML/paginapresentacion2proyectos.html">Proyectos</a></li>
+        <li><a href="HTML/paginapresentacion2contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="carrusel">
+        <div class="carrusel-titulo">
+            <h1><br>Proyectos multidisciplinarios <br> en aguas subterr&aacute;neas</h1>
+            <h2>Grupo de Investigaci&oacute;n en Gesti&oacute;n Integral del Agua Subterr&aacute;nea (GIGIAS)</h2>
+        </div>
+    <a href="HTML/paginapresentacion2proyectos.html" class="slide active">
+        <img src="IMAGEN/Slider1.png" alt="Slider1">
+    </a>
+    <a href="HTML/paginapresentacion2grupo.html" class="slide">
+        <img src="IMAGEN/Slider2.png" alt="Slider2">
+    </a>
+    <a href="HTML/paginapresentacion2contacto.html" class="slide">
+        <img src="IMAGEN/Slider3.png" alt="Slider3">
+    </a>
+
+    <button class="prev" onclick="prevSlide()">❮</button>
+    <button class="next" onclick="nextSlide()">❯</button>
+    </div>
+
+    <br><br><br><br><br><br><br>
+    <div class="GIGIAS fade-in fade-in-delayed">
+        <img src="IMAGEN/GIGIAS.jpg" width="300px" alt=" Grupo de Investigación en Gestión Integral del Agua Subterránea ">
+
+    <div class="Texto-GIGIAS accordion-section">
+        <div class="accordion-title">Misión</div>
+        <div class="accordion-content">
+            <p>Contribuir en la solución de problemáticas asociadas al uso y explotación del agua subterránea, y atender de manera integral sus relaciones con el ambiente, la sociedad y el desarrollo económico, aportando desde distintas áreas de la geofísica, geología e ingeniería.</p>
+        </div>
+    </div>
+<div class="Texto-GIGIAS accordion-section">
+    <div class="accordion-title">Visión</div>
+    <div class="accordion-content">
+        <p>Conformar un grupo de investigaci&oacute;n de excelencia y reconocimiento a nivel nacional e internacional dentro de la UNAM que d&eacute; respuesta y atención integral a la gesti&oacute;n del agua subterr&aacute;nea, promoviendo el uso de t&eacute;cnicas, m&eacute;todos y modelos matem&aacute;ticos como herramientas de soporte a la toma de decisiones.</p>
+    </div>
+</div>
+    </div>
+    <div class="Tematicas fade-in fade-in-delayed"">
+        <h2>Tem&aacute;ticas de la gesti&oacute;n del agua subterr&aacute;nea</h2>
+        <img src="IMAGEN/grupoinvestigacion.jpg" width="600px" alt="Grupo de Investigacion en Gestion Integral del Agua">
+    </div>
+    <p></p>
+
+<script>
+// Acordeón para "Misión" y "Visión"
+document.querySelectorAll('.accordion-title').forEach(title => {
+    title.addEventListener('click', () => {
+        const content = title.nextElementSibling;
+        content.classList.toggle('open');
+    });
+});
+
+// Animaciones de entrada al cargar
+window.addEventListener('load', () => {
+    document.querySelectorAll('.GIGIAS, .Tematicas').forEach(el => {
+        el.classList.add('fade-in');
+    });
+});
+
+// Carrusel automático + botones
+let currentSlide = 0;
+const slides = document.querySelectorAll('.carrusel .slide');
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+    });
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+
+// Autoavance cada 4 segundos
+let autoAdvance = setInterval(nextSlide, 4000);
+
+// Iniciar en la primera imagen
+window.addEventListener('DOMContentLoaded', () => {
+    showSlide(currentSlide);
+});
+</script>
+
+</body>
+</html>
