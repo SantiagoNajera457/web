@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyectos multidisciplinarios del Instituto de Geof&iacute;sica de la UNAM enfocados en el estudio del agua subterr&aacute;nea.">
+    <link rel="stylesheet" href="CSS/estilo2inicio.css">
+    <title>Proyectos multidisciplinarios en aguas subterr&aacute;neas</title>
+</head>
+<body>
+    <div class="logos-superiores">
+        <img src="IMAGEN/logounam.png" alt="Logo UNAM" class="logo-unam" loading="lazy">
+        <img src="IMAGEN/logogeofisica.png" alt="Logo Instituto de Geofísica UNAM" loading="lazy">
+    </div>
+
+    <ul class="navbar">
+        <li><a class="active" href="#">Inicio</a></li>
+        <li><a href="HTML/paginapresentacion2grupo.html">Grupo de trabajo</a></li>
+        <li><a href="HTML/paginapresentacion2proyectos.html">Proyectos</a></li>
+        <li><a href="HTML/paginapresentacion2contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="carrusel">
+        <a href="https://www.gaceta.unam.mx/que-significa-realmente-eso-de-dia-cero-por-la-escasez-de-agua/" class="slide active" aria-hidden="false">
+            <img src="IMAGEN/slider-diacero.png" alt="Art&iacute;culo sobre el d&iacute;a cero por escasez de agua" loading="lazy">
+            <div class="progress-bar"></div>
+            <div class="caption">&iquest;Qu&eacute; significa realmente eso de d&iacute;a cero por la escasez de agua?</div>
+        </a>
+        <a href="https://www.gaceta.unam.mx/universitarios-y-habitantes-de-santa-rosa-xochiac-unidos-para-reforestar-un-pulmon-del-poniente-de-la-cdmx/" class="slide" aria-hidden="true">
+            <img src="IMAGEN/slider-reforestacion.png" alt="Reforestaci&oacute;n en Santa Rosa Xochiac" loading="lazy">
+            <div class="progress-bar"></div>
+            <div class="caption">Universitarios y habitantes de Santa Rosa Xochiac reforestan pulm&oacute;n del poniente de la CDMX</div>
+        </a>
+        <a href="https://www.dgcs.unam.mx/boletin/bdboletin/2025_251.html" class="slide" aria-hidden="true">
+            <img src="IMAGEN/slider-manantial.jpg" alt="Manantial Ojo de Agua estabilizado por la UNAM" loading="lazy">
+            <div class="progress-bar"></div>
+            <div class="caption">Cient&iacute;ficos de la UNAM estabilizan el manantial Ojo de Agua</div>
+        </a>
+        <button class="prev" onclick="prevSlide()" tabindex="0" aria-label="Anterior">❮</button>
+        <button class="next" onclick="nextSlide()" tabindex="0" aria-label="Siguiente">❯</button>
+    </div>
+    <div class="indicators"></div>
+
+    <div class="extra-content">
+        <h2>Material Adicional</h2>
+        <hr class="separador-blanco">
+        <h3>Video entrevista Santa Rosa Xochiac 2025</h3>
+        <div class="video-container">
+            <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/jVVfwAWsBUk" 
+                title="Video entrevista sobre geof&iacute;sica y agua subterr&aacute;nea" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen loading="lazy">
+            </iframe>
+        </div>
+        <hr class="separador-blanco">
+        <h3>Carteles</h3>
+        <div class="galeria-carteles">
+            <img src="IMAGEN/Cartel1-EGU-Jacob-SistemaLagunar.jpg" alt="Cartel 1" loading="lazy" onclick="abrirLightbox(this.src, this.alt)">
+            <img src="IMAGEN/Cartel2-Póster-CCH-Colombia2025.jpg" alt="Cartel 2" loading="lazy" onclick="abrirLightbox(this.src, this.alt)">
+            <img src="IMAGEN/Cartel3-Poster_SELPER_MAHH_Tabasco.jpg" alt="Cartel 3" loading="lazy" onclick="abrirLightbox(this.src, this.alt)">
+            <img src="IMAGEN/Cartel4-Cartel_presencial_CICE-CR.jpg" alt="Cartel 4" loading="lazy" onclick="abrirLightbox(this.src, this.alt)">
+            <img src="IMAGEN/Cartel5-Infografia V1.jpg" alt="Cartel 5" loading="lazy" onclick="abrirLightbox(this.src, this.alt)">
+            <img src="IMAGEN/Cartel6-Poster_VF_AGU_Chapman_Valencia_Oct2019.jpg" alt="Cartel 6" loading="lazy" onclick="abrirLightbox(this.src, this.alt)">
+        </div>
+        <div id="lightbox" class="lightbox">
+            <span class="cerrar" onclick="cerrarLightbox()">✖</span>
+            <img id="lightbox-img" src="" alt="Cartel ampliado">
+        </div>
+    </div>
+
+<script>
+(() => {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carrusel .slide');
+    const indicators = document.querySelector('.indicators');
+
+    function createDots() {
+        indicators.innerHTML = '';
+        slides.forEach((_, i) => {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            dot.addEventListener('click', () => goToSlide(i));
+            indicators.appendChild(dot);
+        });
+    }
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+            slide.setAttribute('aria-hidden', i !== index);
+        });
+        updateDots();
+        updateProgressBar();
+    }
+
+    function goToSlide(index) {
+        currentSlide = index;
+        showSlide(currentSlide);
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function updateDots() {
+        const dots = document.querySelectorAll('.dot');
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
+    }
+
+    function updateProgressBar() {
+        const bars = document.querySelectorAll('.progress-bar');
+        bars.forEach(bar => {
+            bar.style.animation = 'none';
+            bar.style.opacity = '0';
+        });
+        const currentBar = slides[currentSlide].querySelector('.progress-bar');
+        void currentBar.offsetWidth;
+        currentBar.style.animation = null;
+        currentBar.style.opacity = '1';
+    }
+
+    window.addEventListener('load', () => {
+        createDots();
+        showSlide(currentSlide);
+        document.querySelector('.prev').onclick = prevSlide;
+        document.querySelector('.next').onclick = nextSlide;
+        setInterval(nextSlide, 10000);
+    });
+})();
+
+function abrirLightbox(src, alt) {
+    const lightbox = document.getElementById("lightbox");
+    const img = document.getElementById("lightbox-img");
+    img.src = src;
+    img.alt = alt;
+    lightbox.style.display = "flex";
+}
+
+function cerrarLightbox() {
+    const lightbox = document.getElementById("lightbox");
+    lightbox.style.display = "none";
+}
+
+
+</script>
+</body>
+</html>

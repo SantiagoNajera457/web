@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../CSS/estilo2grupo.css">
+    <title>Proyectos multidisciplinarios en aguas subterr&aacute;neas</title>
+</head>
+<body>
+    <div class="logos-superiores">
+        <img src="../IMAGEN/logounam.png" alt="Logo UNAM" class="logo-unam">
+        <img src="../IMAGEN/logogeofisica.png" alt="Logo Instituto de Geof&iacute;sica UNAM">
+    </div>
+    <ul class="navbar">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a class="active" href="#">Grupo de trabajo</a></li>
+        <li><a href="../HTML/paginapresentacion2proyectos.html">Proyectos</a></li>
+        <li><a href="../HTML/paginapresentacion2contacto.html">Contacto</a></li>
+    </ul>
+
+    <h1>Grupo de trabajo</h1>
+    <div class="menu-perfiles">
+        <label for="menu-imagenes">Ir al perfil:</label>
+        <select id="menu-imagenes">
+            <option value="">Selecciona un integrante</option>
+            <option value="Aurora">Dra. Ma. Aurora Armienta Hern&aacute;ndez</option>
+            <option value="Oscar">Dr. Oscar A. Escolero Fuentes</option>
+            <option value="Jose Luis Arce">Dr. Jos&eacute; Luis Arce Saldaña</option>
+            <option value="Graciela">Dra. Graciela Herrera Zamarr&oacute;n</option>
+            <option value="Claudia">Dra. Claudia Arango Galv&aacute;n</option>
+            <option value="Eric">Dr. Eric Morales Casique</option>
+            <option value="Jose Ivan">Dr. Jos&eacute; Iv&aacute;n Morales Arredondo</option>
+            <option value="Juan">Dr. Juan P&eacute;rez Quezadas</option>
+            <option value="Janete">Dra. Janete Mor&aacute;n Ramírez</option>
+            <option value="Mario">Dr. Mario Alberto Hern&aacute;ndez Hern&aacute;ndez</option>
+            <option value="Alejandra">C. Dra. Alejandra Cort&eacute;s Silva</option>
+            <option value="Guillermo">Dr. Guillermo de Jes&uacute;s Hern&aacute;ndez Garc&iacute;a</option>
+            <option value="Jose Luis Lezama">M.C. Jos&eacute; Luis Lezama Campos</option>
+        </select>
+    </div>
+
+    <div class="Grupo-trabajo">
+        <div class="perfil" id="default">
+            <img src="../IMAGEN/grupotrabajo.jpg" width="600px" alt="Grupo Trabajo">
+        </div>
+        <div class="perfil" id="Aurora">
+            <img src="../IMAGEN/EQUIPO/1Aurora.jpg" width="600px" alt="Aurora Armienta Hernandez">
+        </div>
+        <div class="perfil" id="Oscar">
+            <img src="../IMAGEN/EQUIPO/2Oscar.jpg" width="600px" alt="Oscar A Escolero Fuentes">
+        </div>
+        <div class="perfil" id="Jose Luis Arce">
+            <img src="../IMAGEN/EQUIPO/3Jose.jpg" width="600px" alt="Jose Luis Arce Saldaña">
+        </div>
+        <div class="perfil" id="Graciela">
+            <img src="../IMAGEN/EQUIPO/4Graciela.jpg" width="600px" alt="Graciela Herrera Zamarron">
+        </div>
+        <div class="perfil" id="Claudia">
+            <img src="../IMAGEN/EQUIPO/5Claudia.jpg" width="600px" alt="Claudia Arango Galvan">
+        </div>
+        <div class="perfil" id="Eric">
+            <img src="../IMAGEN/EQUIPO/6Eric.jpg" width="600px" alt="Eric Morales Casique">
+        </div>
+        <div class="perfil" id="Jose Ivan">
+            <img src="../IMAGEN/EQUIPO/7Jose.jpg" width="600px" alt="Jose Ivan Morales Arredondo">
+        </div>
+        <div class="perfil" id="Juan">
+            <img src="../IMAGEN/EQUIPO/8Juan.jpg" width="600px" alt="Juan Perez Quezadas">
+        </div>
+        <div class="perfil" id="Janete">
+            <img src="../IMAGEN/EQUIPO/9Janete.jpg" width="600px" alt="Janete Moran Ramírez">
+        </div>
+        <div class="perfil" id="Mario">
+            <img src="../IMAGEN/EQUIPO/10Mario.jpg" width="600px" alt="Mario Alberto Hernandez Hernandez">
+        </div>
+        <div class="perfil" id="Alejandra">
+            <img src="../IMAGEN/EQUIPO/11Alejandra.jpg" width="600px" alt="Alejandra Cortes Silva">
+        </div>
+        <div class="perfil" id="Guillermo">
+            <img src="../IMAGEN/EQUIPO/12Guillermo.jpg" width="600px" alt="Guillermo de Jesus Hernandez Garcia">
+        </div>
+        <div class="perfil" id="Jose Luis Lezama">
+            <img src="../IMAGEN/EQUIPO/13Jose.jpg" width="600px" alt="Jose Luis Lezama Campos">
+        </div>
+    </div>
+
+<script>
+    const select = document.getElementById("menu-imagenes");
+    const perfiles = document.querySelectorAll(".perfil");
+
+    let perfilActual = document.getElementById("default");
+    perfilActual.classList.add("visible");
+
+    select.addEventListener("change", function () {
+        const seleccionado = this.value;
+
+        if (!seleccionado) return;
+
+        const nuevoPerfil = document.getElementById(seleccionado);
+
+        if (perfilActual && perfilActual !== nuevoPerfil) {
+            perfilActual.classList.remove("visible");
+        }
+
+        nuevoPerfil.classList.add("visible");
+        perfilActual = nuevoPerfil;
+    });
+</script>
+
+</body>
+</html>

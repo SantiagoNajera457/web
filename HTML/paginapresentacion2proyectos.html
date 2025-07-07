@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../CSS/estilo2proyectos.css">
+    <title>Proyectos multidisciplinarios en aguas subterr&aacute;neas</title>
+</head>
+<body>
+    <div class="logos-superiores">
+        <img src="../IMAGEN/logounam.png" alt="Logo UNAM" class="logo-unam">
+        <img src="../IMAGEN/logogeofisica.png" alt="Logo Instituto de Geof&iacute;sica UNAM">
+    </div>
+    <ul class="navbar">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../HTML/paginapresentacion2grupo.html">Grupo de trabajo</a></li>
+        <li><a class="active" href="#">Proyectos</a></li>
+        <li><a href="../HTML/paginapresentacion2contacto.html">Contacto</a></li>
+    </ul>
+
+    <h1>Proyectos</h1>
+
+<div class="contenedor-gigias fade-in fade-in-delayed">
+    <div class="GIGIAS">
+        <div class="titulo">
+            <h1>Proyectos multidisciplinarios <br> en aguas subterr&aacute;neas</h1>
+            <h2>Grupo de Investigaci&oacute;n en Gesti&oacute;n Integral del Agua Subterr&aacute;nea (GIGIAS)</h2>
+        </div>
+
+        <button class="boton-desplegar" id="toggle-gigias">Mostrar m&aacute;s informaci&oacute;n</button>
+    
+        <div class="contenido-gigias" id="contenido-gigias">
+            <img src="../IMAGEN/GIGIAS.jpg" width="300px" alt="Grupo de Investigación en Gestión Integral del Agua Subterránea">
+
+            <div class="contenedor-mision-vision">
+                <div class="Texto-GIGIAS accordion-section">
+                    <div class="accordion-title">Misi&oacute;n</div>
+                    <div class="accordion-content">
+                        <p>Contribuir en la soluci&oacute;n de problem&aacute;ticas asociadas al uso y explotaci&oacute;n del agua subterr&aacute;nea, y atender de manera integral sus relaciones con el ambiente, la sociedad y el desarrollo econ&oacute;mico, aportando desde distintas &aacute;reas de la geof&iacute;sica, geolog&iacute;a e ingenier&iacute;a.</p>
+                    </div>
+                </div>
+                <div class="Texto-GIGIAS accordion-section">
+                    <div class="accordion-title">Visi&oacute;n</div>
+                    <div class="accordion-content">
+                        <p>Conformar un grupo de investigaci&oacute;n de excelencia y reconocimiento a nivel nacional e internacional dentro de la UNAM que d&eacute; respuesta y atención integral a la gesti&oacute;n del agua subterr&aacute;nea, promoviendo el uso de t&eacute;cnicas, m&eacute;todos y modelos matem&aacute;ticos como herramientas de soporte a la toma de decisiones.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="mapa-interactivo">
+    <h2>Mapa de nuestros proyectos</h2>
+    <div class="controles-capas">
+        <label><input type="checkbox" id="check-vigente">Vigente</label>
+        <label><input type="checkbox" id="check-desarrollado">Desarrollado</label>
+    </div>
+    <div id="map"></div>
+</section>
+
+<div class="contenedor-gigias fade-in fade-in-delayed">
+    <div class="GIGIAS">
+        <div class="titulo">
+            <h1>Proyecto PAPIIT - Tabasco</h1>
+            <h2>Presentaci&oacute;n de resultados del proyecto en Tabasco dentro del programa PAPIIT</h2>
+        </div>
+
+        <div class="contenido-gigias abierto">
+            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSb4wCs_zpPBypQXPuRhc3ZmbDf_HlQxU85WfeAHbsFo_-B8w9lDWASGxQGCorErU2TEzr0rgkEXvKk/pubembed?start=true&loop=true&delayms=60000"
+                frameborder="0" width="720" height="450" allowfullscreen loading="lazy">
+            </iframe>
+        </div>
+
+        <a href="https://docs.google.com/presentation/d/1FiVAWlR4upQQrX09A6qSs7mF804jUyBgRhi7hmLSjlM/edit?usp=sharing" class="boton" target="_blank">
+            Ver en Google Drive
+        </a>
+    </div>
+</div>
+
+<section class="proyectos">
+    <h2>Otros proyectos</h2>
+    <div class="tarjetas-proyectos">
+        <div class="tarjeta">
+            <img src="../IMAGEN/cosomanguera.jpg" alt="Proyecto CONAHCYT">
+            <h3>Proyecto C&aacute;tedras CONAHCYT - 2018</h3>
+            <p>"Exploraci&oacute;n y explotaci&oacute;n sustentable de los acu&iacute;feros en M&eacute;xico"</p>
+            <p>Departamento de Recursos Naturales - Instituto de Geof&iacute;sica<br>Universidad Nacional Aut&oacute;noma de M&eacute;xico</p>
+            <a href="https://catedra-conacyt-unam.jimdosite.com/" class="boton">Ver m&aacute;s</a>
+        </div>
+        <div class="tarjeta">
+            <img src="../IMAGEN/aguagrifo.jpg" alt="Peligrosidad Arsenico">
+            <h3>Peligrosidad por Ars&eacute;nico en el AMQ</h3>
+            <p>Peligrosidad por Ars&eacute;nico en el Acu&iacute;fero Morelia - Quer&eacute;ndaro</p>
+            <p>Tesis doctoral<br>Transporte y Destino de Ars&eacute;nico en el Acu&iacute;fero Morelia-Quer&eacute;daro<br>por medio de Modelaci&oacute;n Subterr&aacute;nea</p>
+            <a href="https://aspeligrosidadamq.com/" class="boton">Ver m&aacute;s</a>
+        </div>
+    </div>
+</section>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Acordeón Misión / Visión
+    document.querySelectorAll('.accordion-title').forEach(title => {
+        title.addEventListener('click', () => {
+            const content = title.nextElementSibling;
+            content.classList.toggle('open');
+        });
+    });
+
+    // Mostrar / ocultar GIGIAS
+    const boton = document.getElementById('toggle-gigias');
+    const contenido = document.getElementById('contenido-gigias');
+
+    boton.addEventListener('click', () => {
+        contenido.classList.toggle('abierto');
+        boton.textContent = contenido.classList.contains('abierto')
+            ? 'Ocultar información'
+            : 'Mostrar más información';
+    });
+
+    // Leaflet - mapa interactivo
+const map = L.map('map').setView([23.6345, -102.5528], 5);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+// Íconos personalizados
+const iconoAzul = L.icon({
+    iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+    shadowSize: [41, 41]
+});
+
+const iconoRojo = L.icon({
+    iconUrl: '../IMAGEN/marker-icon-red.png', // o usa una URL directa si no lo descargas
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+    shadowSize: [41, 41]
+});
+
+// Definir capas
+const vigente = L.layerGroup([
+    L.marker([21.885492425670858, -102.2953484571106], { icon: iconoAzul }).bindPopup("Proyecto Vigente Aguascalientes"),
+    L.marker([19.499520946868564, -98.81530023463662], { icon: iconoAzul }).bindPopup("Proyecto Vigente CDMX"),
+    L.marker([19.704411241264136, -101.19234837852613], { icon: iconoAzul }).bindPopup("Proyecto Vigente Morelia"),
+    L.marker([19.96967960692915, -101.14469339240406], { icon: iconoAzul }).bindPopup("Proyecto Vigente Cuitzeo"),
+    L.marker([18.81112381256133, -98.95233774911037], { icon: iconoAzul }).bindPopup("Proyecto Vigente Cuautla"),
+    L.marker([20.738875490904025, -99.3819855005854], { icon: iconoAzul }).bindPopup("Proyecto Vigente Zimapán"),
+    L.marker([17.74100936086549, -91.76628486933572], { icon: iconoAzul }).bindPopup("Proyecto Vigente Emiliano Zapata"),
+    L.marker([20.722927710727223, -103.56615372403826], { icon: iconoAzul }).bindPopup("Proyecto Vigente La Primavera")
+]);
+
+const desarrollado = L.layerGroup([
+    L.marker([21.133064887859778, -101.68030342063628], { icon: iconoRojo }).bindPopup("Proyecto Desarrollado León"),
+    L.marker([20.528614421547253, -100.80906487650594], { icon: iconoRojo }).bindPopup("Proyecto Desarrollado Celaya"),
+    L.marker([20.91559511235427, -100.74698077665748], { icon: iconoRojo }).bindPopup("Proyecto Desarrollado San Miguel de Allende"),
+    L.marker([19.782370444665258, -100.65581113200156], { icon: iconoRojo }).bindPopup("Proyecto Desarrollado Los Azufres"),
+    L.marker([19.805596627385572, -100.17362298550016], { icon: iconoRojo }).bindPopup("Proyecto Desarrollado Tlalpujahua"),
+    L.marker([20.099120697224507, -98.75994443547748], { icon: iconoRojo }).bindPopup("Proyecto Desarrollado Pachuca"),
+    L.marker([20.21483737600395, -98.73108319530856], { icon: iconoRojo }).bindPopup("Proyecto Desarrollado Mineral del chico"),
+    L.marker([16.753460020460654, -93.10997637146077], { icon: iconoRojo }).bindPopup("Proyecto Desarrollado Tuxtla Gutiérrez"),
+    L.marker([20.59254916185477, -100.19546199614038], { icon: iconoRojo }).bindPopup("Proyecto Desarrollado Querétaro"),
+    L.marker([22.772059716872974, -102.58031011156534], { icon: iconoRojo }).bindPopup("Proyecto Desarrollado Zacatecas"),
+    L.marker([32.41887578849011, -115.30441017081255], { icon: iconoRojo }).bindPopup("Proyecto Desarrollado Cerro Prieto"),
+    L.marker([19.684037813405812, -97.44739473925787], { icon: iconoRojo }).bindPopup("Proyecto Desarrollado Los Humeros"),
+    L.marker([19.934348119795743, -98.20996077043213], { icon: iconoRojo }).bindPopup("Proyecto Desarrollado Acoculco")
+]);
+
+// Manejar los checkboxes
+const checkVigente = document.getElementById('check-vigente');
+const checkDesarrollado = document.getElementById('check-desarrollado');
+
+checkVigente.addEventListener('change', () => {
+    if (checkVigente.checked) {
+        vigente.addTo(map);
+    } else {
+        map.removeLayer(vigente);
+    }
+});
+
+checkDesarrollado.addEventListener('change', () => {
+    if (checkDesarrollado.checked) {
+        desarrollado.addTo(map);
+    } else {
+        map.removeLayer(desarrollado);
+    }
+});
+
+});
+
+
+</script>
+
+</body>
+</html>

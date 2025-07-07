@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto | GIGIAS</title>
+    <link rel="stylesheet" href="../CSS/estilo2contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="logos-superiores">
+        <img src="../IMAGEN/logounam.png" alt="Logo UNAM" class="logo-unam">
+        <img src="../IMAGEN/logogeofisica.png" alt="Logo Instituto de Geof&iacute;sica UNAM">
+    </div>
+    <ul class="navbar">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../HTML/paginapresentacion2grupo.html">Grupo de trabajo</a></li>
+        <li><a href="../HTML/paginapresentacion2proyectos.html">Proyectos</a></li>
+        <li><a class="active" href="#">Contacto</a></li>
+    </ul>
+
+    <div class="contacto-container">
+        <h1>Cont&aacute;ctanos</h1>
+        <div class="form-y-datos">
+            <form class="formulario-contacto" action="https://formsubmit.co/santiago.najera457@gmail.com" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="name" required>
+
+                <label for="correo">Correo electr&oacute;nico:</label>
+                <input type="email" id="correo" name="email" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="message" rows="5" required></textarea>
+
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://santiagonajera457.github.io/web/HTML/paginapresentacion2contacto.html">
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <div class="datos-contacto">
+                <h3>Datos de contacto</h3>
+                <ul>
+                    <li><strong>Instituto de Geofísica:</strong></li>
+                        <li><a href="https://www.geofisica.unam.mx/vinculacion/">Coordinación de vinculación</a></li>
+                        <li><a href="https://www.geofisica.unam.mx/recursos-naturales/">Recursos naturales</a></li>
+                    <li><strong>Redes sociales:</strong></li>
+                        <li><a href="https://www.facebook.com/GeofisicaUNAM?__tn__=%2Cd" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="https://www.instagram.com/geofisica.unam?utm_source=ig_web_button_share_sheet&igsh=MXYzYjljNnZlM203cA==" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="https://www.youtube.com/@GeofisicaUNAM" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
+                 </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

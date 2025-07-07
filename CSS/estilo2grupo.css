@@ -1,0 +1,138 @@
+body {
+    font-size: 20px;
+    background: url(../IMAGEN/laguna.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1a1a1a99;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+ul.navbar li {
+    display: inline-block;
+}
+
+ul.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+ul.navbar li a:hover {
+    background-color: #1a1a1a;
+}
+
+ul.navbar li a.active {
+    background-color: #1a1a1a;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 360%;
+}
+
+h2, h3, p {
+    text-align: center;
+    color: white;
+}
+
+.Grupo-trabajo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    margin: 40px auto;
+    width: 85%;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.Grupo-trabajo img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.Grupo-trabajo h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: white;
+    font-size: 200%;
+    margin-bottom: 30px;
+}
+
+.menu-perfiles {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin: 40px auto;
+    width: fit-content;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.menu-perfiles label {
+    display: block;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#menu-imagenes {
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+}
+
+.perfil {
+    width: 100%;
+    text-align: center;
+}
+
+.perfil {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 2.5s ease, visibility 2.5s ease;
+    height: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.perfil.visible {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+}
+.logos-superiores {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #1a1a1a99;
+}
+
+.logos-superiores img {
+    height: 50px;
+    object-fit: contain;
+}
+
+.logos-superiores img.logo-unam {
+    height: 90px;
+}
